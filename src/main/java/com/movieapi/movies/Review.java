@@ -6,13 +6,17 @@ import lombok.NoArgsConstructor;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "reviews")
+@Document(collection = "reviews")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+// This class is used to represent a review in the database
 public class Review {
 
         private ObjectId id;
         private String body;
 
+        public Review(String body) {
+                this.body = body;
+        }
 }

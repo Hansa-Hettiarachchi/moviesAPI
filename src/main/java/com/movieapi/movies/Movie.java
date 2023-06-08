@@ -10,10 +10,12 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.List;
 
-@Document(collation = "movies")
+
+@Document(collection = "movies")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+// This class is used to represent a movie in the database
 public class Movie {
     @Id
     private ObjectId id;
